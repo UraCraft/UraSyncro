@@ -1,2 +1,5 @@
-# This is the configuration file!
-# Here all inventories will be saved. You don't need to change something in here.
+#World to syncronise :
+wsyncronise: {world1, world2}
+
+#World Lobby :
+lobby: world

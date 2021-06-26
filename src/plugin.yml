@@ -1,9 +1,9 @@
-main: fr.uracraft.urasyncro.Main
+main: fr.uracraft.urasyncro.UraSyncro
 
-name: UraCraft_Syncronisation
+name: UraSyncro
 
 description: Plugin de syncronisation.
 
-author: Birdo770
+author: Birdo
 
 version: 1.0
