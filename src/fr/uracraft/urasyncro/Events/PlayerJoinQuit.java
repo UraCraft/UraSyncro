@@ -1,5 +1,6 @@
 package fr.uracraft.urasyncro.Events;
 
+import fr.uracraft.urasyncro.Configuration.ConfigFile;
 import fr.uracraft.urasyncro.Player.PlayerInventory;
 import fr.uracraft.urasyncro.UraSyncro;
 import org.bukkit.Material;
@@ -40,10 +41,7 @@ public class PlayerJoinQuit implements Listener {
 
     @EventHandler
     public void onQuit(PlayerQuitEvent e) {
-
-        String w = e.getPlayer().getLocation().getWorld().getName();
-
-        if(w.equalsIgnoreCase("Minage01") || w.equalsIgnoreCase("Minage02") || w.equalsIgnoreCase("Minage03") || w.equalsIgnoreCase("Alpha") || w.equalsIgnoreCase("Gamma")) {
+        if(ConfigFile.worldIsSyncronized(e.getPlayer().getLocation().getWorld().getName())) {
             PlayerInventory.save(e.getPlayer());//save_inventory
         }
     }
